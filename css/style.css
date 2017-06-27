@@ -14,19 +14,19 @@ h1,h2,h3,h4,h5,h6{
   background-color: darkgray;
   height: 100vh;
 }
-.header, .visual, .main-contents, .slogan, .footer{
+.header, .visual, .main-content, .slogan, .footer{
   width: 950px;
   margin: 0 auto;
 }
 .header{
-  background-color: lightgrey;
+  background-color: aqua;
   height: 10vh;
 }
 .visual{
   background-color: silver;
   height: 10vh;
 }
-.main-contents{
+.main-content{
   background-color: lightgrey;
   height: 10vh;
 }
