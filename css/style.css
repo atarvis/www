@@ -11,48 +11,56 @@ h1,h2,h3,h4,h5,h6{
 }
 /*레이아웃*/
 .wrapper{
-  background-color: darkgray;
+
+  background: url(images/bg_flower.png) no-repeat 50% 0, linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(255,255,255,1) 100%);
   height: 100vh;
 }
-.header, .visual, .main-contents, .slogan, .footer{
+.header, .visual, .main-content, .slogan, .footer{
   width: 950px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 .header{
-  background-color: lightgrey;
-  height: 10vh;
+  height: 115px;
+  background-color: #fff;
+  border-radius:0 0 15px 15px;
 }
 .visual{
-  background-color: silver;
-  height: 10vh;
+  height: 120px;
 }
-.main-contents{
-  background-color: lightgrey;
-  height: 60vh;
+.main-content{
+  background-color: #fff;
+  border-radius: 15px 15px 0 0;
+  min-height: 400px;
   display: flex;
   padding: 30px;
   box-sizing: border-box;
-  flex-direction: row;
+  flex-basis: row;
   justify-content: space-between;
-}
+  align-items: flex-start;
+} 
 .group{
-  background-color: ivory;
+
 }
 .group1{
   width: 250px;
+  height: 100px;
 }
 .group2{
   width: 380px;
+  height: 200px;
 }
 .group3{
   width: 190px;
-  order: -1;
+  height: 150px;
 }
 .slogan{
-  background-color: silver;
+
   height: 10vh;
 }
+.footer-bg{
+background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(255,255,255,1) 100%);
+}
 .footer{
-  background-color: lightgrey;
   height: 10vh;
 }
