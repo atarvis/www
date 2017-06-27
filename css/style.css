@@ -9,3 +9,32 @@ h1,h2,h3,h4,h5,h6{
   font-size: 1em;
   font-weight: normal;
 }
+/*레이아웃*/
+.wrapper{
+  background-color: darkgray;
+  height: 100vh;
+}
+.header, .visual, .main-contents, .slogan, .footer{
+  width: 950px;
+  margin: 0 auto;
+}
+.header{
+  background-color: lightgrey;
+  height: 10vh;
+}
+.visual{
+  background-color: silver;
+  height: 10vh;
+}
+.main-contents{
+  background-color: lightgrey;
+  height: 10vh;
+}
+.slogan{
+  background-color: silver;
+  height: 10vh;
+}
+.footer{
+  background-color: lightgrey;
+  height: 10vh;
+}
