@@ -141,20 +141,46 @@ a{
   float: left;
 }
 .main-menu > li > a{
- font-size: 1.6rem;
- font-family: "noto sans bold";
- color: rgba(255, 255, 255, 0.8);
-   padding: 10px 21px 10px 20px;
-   display: block;
-   border-left: 2px solid rgba(255, 255, 255, 0.2)
-}
+  font-size: 1.6rem;
+  font-family: "noto sans bold";
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  line-height:  45px;
+  padding: 0 20px;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  text-shadow: 1px 1px 0 #181818;
+ }
+.main-menu > li > a:hover{
+  color: hsla(200,80%,80%,0.5);/*마우스 올리면 색상 바뀌는*/
+ }
+.main-menu > li > a:hover::after{
+  content: "";
+  display: block;
+  border-top: 2px solid #13547a;
+ }
 .main-menu ul{
   list-style-type: none;
   background: lightcoral;
   position: absolute;
+}
+.about-html{
+  
+}
+.about-css{
   display: none;
 }
-
+.web-standards{
+  display: none;
+}
+.web-accessibility{
+  display: none;
+}
+.qna{
+  display: none;
+}
+.archive{
+  display: none;
+}
 
 .visual {
     height: 120px;
