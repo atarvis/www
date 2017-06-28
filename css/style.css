@@ -121,7 +121,7 @@ a{
   padding: 10px;
   }
 .info-menu li::after{
-  content: "|" /*가상요소를 이용한 컨텐츠*/
+  content: "|";/*가상요소를 이용한 컨텐츠*/
 }
 .info-menu li:last-child::after{
   content: "";/*마지막에는 가상요소를 제거*/
@@ -139,13 +139,14 @@ a{
 }
 .main-menu > li{
   float: left;
+  position: relative;
 }
 .main-menu > li > a{
   font-size: 1.6rem;
   font-family: "noto sans bold";
   color: rgba(255, 255, 255, 0.8);
   display: block;
-  line-height:  45px;
+  line-height: 45px;
   padding: 0 20px;
   border-left: 2px solid rgba(255, 255, 255, 0.2);
   text-shadow: 1px 1px 0 #181818;
@@ -162,10 +163,34 @@ a{
   list-style-type: none;
   background: lightcoral;
   position: absolute;
+  white-space: nowrap;
+  font-size: 0;
+  top: 47px;
 }
+.main-menu li ul li{
+  font-size: 1.4rem;
+  display: inline-block;
+}
+
+
+
+
 .about-html{
-  
+  display: block !important;
+  top: 0;
+  left: 0;
 }
+.about-html li, .about-html a{
+  background: #fff;
+}
+.about-html a{
+  padding: 0 10px 0 10px;
+}
+.about-html li::before{
+  content: "-";
+}
+
+
 .about-css{
   display: none;
 }
