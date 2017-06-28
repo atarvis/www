@@ -56,9 +56,12 @@ h6 {
 
 
 /* 기본 스타일 */
-
+html{
+  font-size: 10px;
+}
 body {
     font-family: 'Noto Sans Regular', sans-serif;
+    font-size: 1.4rem;
 }
 
 
@@ -78,7 +81,11 @@ body {
     margin: 0 auto;
     box-sizing: border-box;
 }
-
+/*링크스타일*/
+a{
+  color: inherit;
+  text-decoration: none;
+} 
 
 /* 헤더 */
 
@@ -87,6 +94,7 @@ body {
     background-color: #fff;
     border-radius: 0 0 15px 15px;
     position: relative;
+    padding: 0 30px;
 }
 
 
@@ -96,6 +104,38 @@ body {
     position: absolute;
     top: 45px;
     left: 60px;
+}
+
+/*텍스트링크-안내링크*/
+
+.info-menu{
+  list-style-type: none;
+  font-size: 0;
+  text-align: right;
+  position: relative;
+  right: -10px;
+}
+
+.info-menu li, .info-menu a{
+ display: inline-block;
+}
+
+.info-menu li{
+  display: inline;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  }
+
+.info-menu a{
+  padding: 10px;
+  }
+
+.info-menu li::after{
+  content: "|" /*가상요소를 이용한 컨텐츠*/
+}
+
+.info-menu li:last-child::after{
+  content: "";/*마지막에는 가상요소를 제거*/
 }
 
 .visual {
