@@ -85,11 +85,10 @@ a{
 
 /* 헤더 */
 .header {
-    min-height: 115px;
     background-color: #fff;
     border-radius: 0 0 15px 15px;
     position: relative;
-    padding: 0 30px;
+    padding: 0 30px 40px 30px;
 }
 
 
@@ -141,7 +140,7 @@ a{
   float: left;
   position: relative;
 }
-.main-menu > li > a{
+.main-menu span{
   font-size: 1.6rem;
   font-family: "noto sans bold";
   color: rgba(255, 255, 255, 0.8);
@@ -151,17 +150,18 @@ a{
   border-left: 2px solid rgba(255, 255, 255, 0.2);
   text-shadow: 1px 1px 0 #181818;
  }
-.main-menu > li > a:hover{
+.main-menu span:hover,
+.main-menu span:focus{
   color: hsla(200,80%,80%,0.5);/*마우스 올리면 색상 바뀌는*/
  }
-.main-menu > li > a:hover::after{
+.main-menu span:hover::after
+.main-menu span:focus::after{
   content: "";
   display: block;
   border-top: 2px solid #13547a;
  }
 .main-menu ul{
   list-style-type: none;
-  background: lightcoral;
   position: absolute;
   white-space: nowrap;
   font-size: 0;
@@ -182,18 +182,16 @@ a{
 .main-menu ul a:focus::before{
   content:"c";
 }
-
-
-
+.main-menu ul a{
+  padding: 7px 15px 7px 0 ;
+  display: block;
+}
 
 .about-html{
-  display: block !important;
-  top: 0;
+  display: none;
   left: 0;
 }
-.about-html li, .about-html a{
-  background: #fff;
-}
+
 .about-html a{
   padding: 0 10px 0 10px;
 }
@@ -201,19 +199,27 @@ a{
 
 .about-css{
   display: none;
+  left: 0;
 }
 .web-standards{
   display: none;
+  left: 0;
 }
 .web-accessibility{
   display: none;
+  left: -140px;
 }
 .qna{
   display: none;
+  left: -170px;
 }
 .archive{
   display: none;
+  right: -25px;
 }
+
+
+
 
 .visual {
     height: 120px;
