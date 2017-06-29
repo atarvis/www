@@ -172,6 +172,17 @@ a{
   display: inline-block;
 }
 
+.main-menu ul a::before{
+  font-family: "webcafeIcon";
+  content:"r";
+  position: relative;
+  top: 2px;
+}
+.main-menu ul a:hover::before,
+.main-menu ul a:focus::before{
+  content:"c";
+}
+
 
 
 
@@ -185,9 +196,6 @@ a{
 }
 .about-html a{
   padding: 0 10px 0 10px;
-}
-.about-html li::before{
-  content: "-";
 }
 
 

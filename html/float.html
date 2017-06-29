@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>float 속성 익히기</title>
+  <style>
+  .box{
+    background: lightyellow;
+    width: 500px;
+    /*overflow: hidden;노란색영역이 원래는 글씨만이였는데 그 밑 공간까지*/
+  }
+  .box::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .box img{
+    float: right;/*박스의 위치;left로 하면 왼쪽에*/
+    /*position: relative;
+    right: -50px;*/
+  }
+  .note{
+    background: pink;
+    /*clear: both;
+    margin-top: 100px;*/
+    /*clear: both;float랑 영역이 겹치지 않게*/
+  }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="../images/news.gif" alt="">
+    '툭' 버린 담배꽁초, 51억 물어낼 판…법원 "화재 원인"
+  </div>
+  <div class="note">
+    '툭' 버린 담배꽁초, 51억 물어낼 판…법원 "화재 원인"
+  </div>
+</body>
+</html>
