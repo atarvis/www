@@ -1,3 +1,4 @@
+//서브메뉴를 위한 스크립트//
 $(function(){
   $(".main-menu>li").hover(
     function(){/*함수를 실행*/
@@ -13,7 +14,7 @@ $(function(){
       $(this).siblings("ul").css("display","block");
     }
   );
-  $(".main-menu ul li:last-child a").focusout(
+  $(".main-menu ul li:last-child a").focusout(/*a중에서도 마지막꺼를 벗어날 때 out되도록 */
     function(){
       $(this).parent().parent().css("display","none");
     }
