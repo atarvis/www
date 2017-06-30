@@ -19,7 +19,11 @@
     src: url('font/webcafeIcon.eot');
     src: url('font/webcafeIcon.eot?#iefix') format('embedded-opentype'), url('font/webcafeIcon.woff') format('woff'), url('font/webcafeIcon.ttf') format('truetype'), url('font/webcafeIcon.svg#webcaferegular') format('svg');
 }
-
+/*숨김 콘텐츠*/
+legend{
+  position: absolute;
+  left: -999em;
+}
 
 /* 요소의 여백 초기화 */
 html,
@@ -309,4 +313,63 @@ a{
 }
 .footer {
     height: 10vh;
+}
+
+/*로그인*/
+.login{
+  background: radial-gradient(circle at right top, white, lightblue);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow:  3px 3px 10px 0px gray;
+}
+.login-heading{
+  font-family: "noto sans bold",sans-serif;
+  font-size: 1.6rem;
+  color: blue;
+  text-indent: 10px;
+}
+.login-form{
+  background: white;
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0 ;
+  padding: 10px;
+}
+.login-form fieldset{
+  border: 0;
+  border-bottom: 1px solid gray;
+  padding: 0 0 10px 0;
+  margin: 0;
+  position: relative;
+}
+.user-pw{
+  margin-top: 5px;
+}
+.login-form label{
+  display: inline-block;
+  width: 4em;
+}
+.login-form input{
+box-sizing: border-box;
+width: 95px;
+height: 22px;
+border: 1px, solid #aaa;
+padding: 1px, 1px, 1px, 5px;
+}
+.btn-login{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.member{
+  padding: 0 0 10px 10px;
+  background: white;
+  border-radius: 0 0 5px 5px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }
