@@ -13,7 +13,7 @@
 * 속성
 * 값
 
-[github 계정](https://github.com/atarvis/)
+[github 계정](https://github.com/owl423)
 
 오늘은 날씨가 맑은 편입니다. 두칸 이상 띄면 줄 바꿈  
 햇살이 화사해요.
