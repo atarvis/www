@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transtion 익히기</title>
+  <style>
+    .box1{
+      width: 100px;
+      height: 100px;
+      background: blueviolet;
+      transition: all 1s ease-in-out;
+      /*transition: border-radius 2s 0.5s ease-in-out, background 3s 1s ease-in-out;*/
+    }
+    .box1:hover, .box1:focus{/*hover는 마우스 올렸을 때, focus는 tab키 눌렀을 때*/
+      border-radius: 50%;
+      background: greenyellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1" tabindex="0"></div>
+</body>
+</html>
