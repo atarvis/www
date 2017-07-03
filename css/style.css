@@ -365,11 +365,11 @@ padding: 1px, 1px, 1px, 5px;
   padding: 0;
   cursor: pointer;
 }
-.member{
-  padding: 0 0 10px 10px;
-  background: white;
-  border-radius: 0 0 5px 5px;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
+.member {
+    padding: 0 10px 10px 10px;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
 }
