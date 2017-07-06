@@ -1,31 +1,41 @@
 @charset "utf-8";
+@import "fontello.css";
 
 /* 웹폰트 선언 */
+
 @font-face {
     font-family: 'Noto Sans Regular';
     font-style: normal;
     font-weight: 400;
     src: local('Noto Sans Regular'), local('NotoSans-Regular'), url('font/eot/NotoSansKR-Regular-Hestia.eot'), url('font/eot/NotoSansKR-Regular-Hestia.eot?#iefix') format('embedded-opentype'), url('font/woff/NotoSansKR-Regular-Hestia.woff') format('woff'), url('font/otf/NotoSansKR-Regular-Hestia.otf') format('opentype');
 }
+
 @font-face {
     font-family: 'Noto Sans Bold';
     font-style: normal;
     font-weight: 700;
     src: local('Noto Sans Bold'), local('NotoSans-Bold'), url('font/eot/NotoSansKR-Bold-Hestia.eot'), url('font/eot/NotoSansKR-Bold-Hestia.eot?#iefix') format('embedded-opentype'), url('font/woff/NotoSansKR-Bold-Hestia.woff') format('woff'), url('font/otf/NotoSansKR-Bold-Hestia.otf') format('opentype');
 }
+
 @font-face {
     font-family: 'webcafeIcon';
     font-weight: 400;
     src: url('font/webcafeIcon.eot');
     src: url('font/webcafeIcon.eot?#iefix') format('embedded-opentype'), url('font/webcafeIcon.woff') format('woff'), url('font/webcafeIcon.ttf') format('truetype'), url('font/webcafeIcon.svg#webcaferegular') format('svg');
 }
-/*숨김 콘텐츠*/
-legend{
-  position: absolute;
-  left: -999em;
+
+
+/* 숨김 콘텐츠 */
+
+legend,
+.hidden {
+    position: absolute;
+    left: -9999em;
 }
 
+
 /* 요소의 여백 초기화 */
+
 html,
 body,
 h1,
@@ -43,6 +53,7 @@ li {
 
 
 /* 제목크기 초기화 */
+
 h1,
 h2,
 h3,
@@ -55,20 +66,33 @@ h6 {
 
 
 /* 기본 스타일 */
-html{
-  font-size: 10px;
+
+html {
+    font-size: 10px;
 }
+
 body {
     font-family: 'Noto Sans Regular', sans-serif;
     font-size: 1.4rem;
 }
 
+input,
+textarea,
+select,
+option,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 
 /* 레이아웃 */
+
 .wrapper {
     background: url(images/bg_flower.png) no-repeat 50% 0, linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
     height: 100vh;
 }
+
 .header,
 .visual,
 .main-content,
@@ -80,14 +104,16 @@ body {
 }
 
 
-/*링크스타일*/
-a{
-  color: inherit;
-  text-decoration: none;
-} 
+/* 링크 스타일 */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
 
 /* 헤더 */
+
 .header {
     background-color: #fff;
     border-radius: 0 0 15px 15px;
@@ -97,191 +123,202 @@ a{
 
 
 /* 로고 */
+
 .logo {
     position: absolute;
-    top: 48px;
+    top: 50px;
     left: 60px;
 }
 
 
-/*텍스트링크-안내링크*/
-.info-menu{
-  list-style-type: none;
-  font-size: 0;
-  text-align: right;
-  position: relative;
-  right: -10px;
+/* 텍스트링크 - 안내링크 */
+
+.info-menu {
+    list-style-type: none;
+    font-size: 0;
+    text-align: right;
+    position: relative;
+    right: -10px;
 }
-.info-menu li, .info-menu a{
- display: inline-block;
+
+.info-menu li,
+.info-menu a {
+    display: inline-block;
 }
-.info-menu li{
-  display: inline;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  }
-.info-menu a{
-  padding: 10px;
-  }
-.info-menu li::after{
-  content: "|";/*가상요소를 이용한 컨텐츠*/
+
+.info-menu li {
+    font-size: 1.4rem;
+    text-transform: uppercase;
 }
-.info-menu li:last-child::after{
-  content: "";/*마지막에는 가상요소를 제거*/
+
+.info-menu a {
+    padding: 10px;
+}
+
+.info-menu li::after {
+    content: ":";
+}
+
+.info-menu li:last-child::after {
+    content: "";
 }
 
 
-/*메인메뉴*/
-.main-menu{
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-  list-style-type: none;
-  border-top: 2px solid #181818;
-  border-radius: 0 0 5px 5px;
-  padding-left: 225px;
-  height: 45px;
+/* 메인 메뉴 */
+
+.main-menu {
+    background: linear-gradient(to bottom, #e5892d 0%, #e0652c 35%, #e0652c 65%, #e5892d 100%);
+    list-style-type: none;
+    border-top: 2px solid #181818;
+    border-radius: 0 0 5px 5px;
+    padding-left: 225px;
+    height: 45px;
 }
-.main-menu > li{
-  float: left;
-  position: relative;
+
+.main-menu>li {
+    float: left;
+    position: relative;
 }
-.main-menu span{
-  font-size: 1.6rem;
-  font-family: "noto sans bold";
-  color: rgba(255, 255, 255, 0.8);
-  display: block;
-  line-height: 45px;
-  padding: 0 20px;
-  border-left: 2px solid rgba(255, 255, 255, 0.2);
-  text-shadow: 1px 1px 0 #181818;
- }
+
+.main-menu span {
+    font-size: 1.6rem;
+    font-family: "Noto Sans Bold";
+    color: rgba(255, 255, 255, 0.95);
+    display: block;
+    padding: 0 20px;
+    line-height: 45px;
+    border-left: 2px solid rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
+}
+
 .main-menu span:hover,
-.main-menu span:focus{
-  color: hsla(200,80%,80%,0.5);/*마우스 올리면 색상 바뀌는*/
- }
-.main-menu span:hover::after
-.main-menu span:focus::after{
-  content: "";
-  display: block;
-  border-top: 2px solid #13547a;
- }
-.main-menu ul{
-  list-style-type: none;
-  position: absolute;
-  white-space: nowrap;
-  font-size: 0;
-  top: 45px;
-}
-.main-menu li ul li{
-  font-size: 1.4rem;
-  display: inline-block;
+.main-menu span:focus {
+    /*color: hsla(45, 80%, 80%, 1);*/
+    color: #ff0;
+    outline: 0;
 }
 
-.main-menu ul a::before{
-  font-family: "webcafeIcon";
-  content:"r";
-  position: relative;
-  top: 2px;
+.main-menu span:hover::after,
+.main-menu span:focus::after {
+    content: "";
+    display: block;
+    border-top: 2px solid #181818;
 }
+
+.main-menu ul {
+    list-style-type: none;
+    position: absolute;
+    white-space: nowrap;
+    top: 45px;
+}
+
+.main-menu ul li {
+    display: inline-block;
+}
+
+.main-menu ul a::before {
+    font-family: "webcafeIcon";
+    content: "r";
+    position: relative;
+    top: 2px;
+}
+
 .main-menu ul a:hover::before,
-.main-menu ul a:focus::before{
-  content:"c";
-}
-.main-menu ul a{
-  padding: 7px 15px 7px 0 ;
-  display: block;
+.main-menu ul a:focus::before {
+    content: "c";
 }
 
-.about-html{
-  display: none;
-  left: 0;
+.main-menu ul a {
+    padding: 8px 15px 7px 0;
+    display: block;
 }
 
-.about-html a{
-  padding: 0 10px 0 10px;
+.about-html {
+    display: none;
+    left: 0;
+}
+
+.about-css {
+    display: none;
+    left: 0;
+}
+
+.web-standards {
+    display: none;
+    left: 0;
+}
+
+.web-accessibility {
+    display: none;
+    left: -140px;
+}
+
+.qna {
+    display: none;
+    left: -170px;
+}
+
+.archive {
+    display: none;
+    right: -25px;
 }
 
 
-.about-css{
-  display: none;
-  left: 0;
-}
-.web-standards{
-  display: none;
-  left: 0;
-}
-.web-accessibility{
-  display: none;
-  left: -140px;
-}
-.qna{
-  display: none;
-  left: -170px;
-}
-.archive{
-  display: none;
-  right: -25px;
+/* 비주얼 */
+
+@keyframes text-ani {
+    0% {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        transform: translate(400px, 70px);
+    }
 }
 
-
-
-/*비주얼*/
-@keyframes text-ani{
-  0%{
-    font-size: 12px;
-    color: rgba(0,0,0,0);
-    transform: translate(0,0);
-  }
-  100%{
-    font-size: 24px;
-    color: rgba(0,0,0,1);
-    transform: translate(400px,75px);
-
-  }
+@keyframes flower-ani {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
 }
+
+.visual-text {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0);
+    animation: text-ani 0.5s forwards ease-in-out;
+}
+
 .visual {
     height: 120px;
     position: relative;
 }
-@keyframes flower-ani{
-  0%{
-  opacity: 1;
-  }
-  100%{
-  opacity: 0;
 
-  }
+.visual::before,
+.visual::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    animation: flower-ani 2s infinite alternate;
 }
 
-
-.visual-text{
-  display: inline-block;
-  /*position: absolute;*/
-  color: rgba(0,0,0,0);
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  animation: text-ani 2s forwards ease-in-out;
+.visual::before {
+    background: url("images/ani_flower_01.png") no-repeat 0 -10px, url(images/ani_flower_02.png) no-repeat 670px 0;
 }
 
-.visual::before,.visual::after{
-  content:"";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  animation: flower-ani 2s infinite alternate;
+.visual::after {
+    background: url(images/ani_flower_03.png) no-repeat 300px 0, url(images/ani_flower_04.png) no-repeat 800px 0;
+    animation-delay: 1s;
 }
-.visual::before{
-    background: url(images/ani_flower_01.png) no-repeat 0px -10px, 
-                url(images/ani_flower_02.png) no-repeat 670px 0px;
-    animation-delay: 0.7s;
-}
-.visual::after{
-  background: url(images/ani_flower_03.png) no-repeat 300px 0px, 
-              url(images/ani_flower_04.png) no-repeat 800px 0px;
-}
-
-
-
 
 .main-content {
     background-color: #fff;
@@ -294,82 +331,202 @@ a{
     /*align-items: flex-start;*/
 }
 
-.group {}
 .group1 {
     width: 250px;
     /*align-self: flex-end;*/
 }
+
 .group2 {
     width: 380px;
 }
+
 .group3 {
     width: 190px;
 }
+
+
+/* 로그인 */
+
+.login {
+    padding: 10px;
+    border-radius: 5px;
+    background: radial-gradient(circle at right top, #e5892d, #e0652c);
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.login-heading {
+    color: #ff0;
+    font-family: "Noto Sans Bold";
+    font-size: 1.6rem;
+    text-indent: 10px;
+}
+
+.login-form {
+    background: #fff;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.login-form fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 10px;
+}
+
+.user-pw {
+    margin-top: 6px;
+}
+
+.login-form label {
+    width: 4em;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.login-form input {
+    box-sizing: border-box;
+    width: 95px;
+    height: 22px;
+    border: 1px solid #aaa;
+    padding: 1px 1px 1px 5px;
+}
+
+.btn-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    background: hsla(0, 100%, 70%, 1);
+    color: #fff;
+    border-radius: 3px;
+    font-size: 1.3rem;
+}
+
+.member {
+    list-style-type: none;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    padding: 0 10px 10px 10px;
+    font-size: 1.3rem;
+}
+
+
+/*플로트 이슈를 해결하기 위한 clearfix */
+
+.member::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.icon-user::before,
+.icon-right-open::before {
+    color: #f00;
+}
+
+.join {
+    float: left;
+}
+
+.find {
+    float: right;
+}
+
+
+/* 유효성 검사 배너 링크 */
+
+.validation {
+    margin-top: 20px;
+}
+
+.validation-list {
+    list-style-type: none;
+}
+
+.validation-list a {
+    display: block;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+    padding-left: 45px;
+    background: url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to bottom, #eee 0%, #ccc 100%);
+}
+
+.term {
+    background: linear-gradient(to bottom, #eee, #ccc);
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.term-heading {
+    font-family: "Noto Sans Bold";
+    font-size: 1.5rem;
+}
+
+.term-list {
+    margin: 10px 0 0 0;
+}
+
+.term-list::before,
+.term-list::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.term-list-subject,
+.term-list-brief {
+    float: right;
+    width: 145px;
+}
+
+.term-list-brief,
+.term-list-thumbnail {
+    margin: 0;
+}
+
+.term-list-subject {
+    color: #296897;
+    font-family: "Noto Sans Bold";
+}
+
+.term-list-thumbnail {
+    float: left;
+}
+
+.term-list .term-list-brief {
+    margin-top: 5px;
+}
+
+.even .term-list-subject,
+.even .term-list-brief {
+    float: left;
+}
+
+.even .term-list-thumbnail {
+    float: right;
+}
+
 .slogan {
     height: 10vh;
 }
+
 .footer-bg {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
 }
+
 .footer {
     height: 10vh;
-}
-
-/*로그인*/
-.login{
-  background: radial-gradient(circle at right top, white, lightblue);
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow:  3px 3px 10px 0px gray;
-}
-.login-heading{
-  font-family: "noto sans bold",sans-serif;
-  font-size: 1.6rem;
-  color: blue;
-  text-indent: 10px;
-}
-.login-form{
-  background: white;
-  margin-top: 10px;
-  border-radius: 5px 5px 0 0 ;
-  padding: 10px;
-}
-.login-form fieldset{
-  border: 0;
-  border-bottom: 1px solid gray;
-  padding: 0 0 10px 0;
-  margin: 0;
-  position: relative;
-}
-.user-pw{
-  margin-top: 5px;
-}
-.login-form label{
-  display: inline-block;
-  width: 4em;
-}
-.login-form input{
-box-sizing: border-box;
-width: 95px;
-height: 22px;
-border: 1px, solid #aaa;
-padding: 1px, 1px, 1px, 5px;
-}
-.btn-login{
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-}
-.member {
-    padding: 0 10px 10px 10px;
-    background: #fff;
-    border-radius: 0 0 5px 5px;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
 }

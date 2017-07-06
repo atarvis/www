@@ -81,68 +81,91 @@
         </header>
         <div class="visual">
             <div class="visual-text">
-                web-standards &amp; web-accessibility
+                Web Satandards &amp; Accessibility
             </div>
         </div>
-
-
         <main class="main-content">
             <div class="group group1">
                 <div class="login">
                     <h2 class="login-heading">로그인</h2>
                     <form action="javascript:alert('회원님 반갑습니다.');" class="login-form">
                         <fieldset>
-                            <legend>
-                                회원 로그인 폼
-                            </legend>
-                      
-                        <div class="user-email">
-                            <label for="user-emial">
-                                아이디
-                            </label>
-                            <input type="email" id="user-emial" required placeholder="이메일">
-                        </div>
-
-                        <div class="user-pw">
-                            <label for="user-pw">
-                                비밀번호
-                            </label>
-                            <input type="password" id="user-pw" required placeholder="최소 8자리 이상">
-                        </div>
-                        <button type="submit" class="btn-login">
-                            로그인
-                        </button>
-                        </fieldset>           
+                            <legend>회원 로그인 폼</legend>
+                            <div class="user-email">
+                                <label for="user-email">아이디</label>
+                                <input type="email" id="user-email" required placeholder="이메일주소">
+                            </div>
+                            <div class="user-pw">
+                                <label for="user-pw">비밀번호</label>
+                                <input type="password" id="user-pw" required placeholder="최소 8자리 이상">
+                            </div>
+                            <button type="submit" class="btn-login">로그인</button>
+                        </fieldset>
                     </form>
-                    <ul class="class memeber">
-                        <li><a href="#" class="join">
-                            회원가입
-                        </a></li>
-                        <li><a href="#" class="find">
-                            아이디/비밀번호 찾기
-                        </a></li>
+                    <ul class="member">
+                        <li class="join icon-user"><a href="#">회원가입</a></li>
+                        <li class="find icon-right-open"><a href="#">아이디/비밀번호 찾기</a></li>
                     </ul>
                 </div>
+                <div class="validation">
+                    <h2 class="validation-heading hidden">유효성 검사 배너 링크</h2>
+                    <ul class="validation-list">
+                        <li>
+                            <a href="https://validator.w3.org/" title="마크업 유효성검사 사이트로 이동" target="_blank">
+                                HTML Markup Validation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://jigsaw.w3.org/css-validator/" title="CSS 유효성검사 사이트로 이동" target="_blank">
+                                CSS Validation Service
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="term">
+                    <h2 class="term-heading">웹관련 용어</h2>
+                    <dl class="term-list">
+                        <dt class="term-list-subject">웹표준 이란?</dt>
+                        <dd class="term-list-thumbnail">
+                            <img src="images/web_standards.gif" alt="W3C 로고">
+                        </dd>
+                        <dd class="term-list-brief">
+                            W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...
+                        </dd>
+                    </dl>
+                    <dl class="term-list even">
+                        <dt class="term-list-subject">웹표준 이란?</dt>
+                        <dd class="term-list-thumbnail">
+                            <img src="images/web_standards.gif" alt="W3C 로고">
+                        </dd>
+                        <dd class="term-list-brief">
+                            W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...
+                        </dd>
+                    </dl>
+                </div>
             </div>
-            <div class="group group2">콘텐츠컬럼2</div>
+            <div class="group group2">
+                <div class="search">
+                    <h2 class="search-heading hidden">검색</h2>
+                    <form action="javascript:alert('검색이 완료되었습니다.');" class="search-form">
+                        <fieldset>
+                            <legend>검색 폼</legend>
+                            <label for="search">자료검색</label>
+                            <input type="search" id="search" class="keyword" required placeholder="검색어를 입력하세요.">
+                            <button type="submit" class="btn-search">검색</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
             <div class="group group3">콘텐츠컬럼3</div>
         </main>
-        <article class="slogan"><span>슬로건</span></article>
+        <article class="slogan">슬로건</article>
         <div class="footer-bg">
             <footer class="footer">푸터</footer>
         </div>
     </div>
-
-<script
-	src="https://code.jquery.com/jquery-3.2.1.min.js"
-	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	crossorigin="anonymous">
-</script>
-<script src="js/webcafe.js">
-    
-</script>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/webcafe.js"></script>
 </body>
 
 </html>
-
