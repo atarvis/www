@@ -14,9 +14,10 @@ $(function(){
       $(this).siblings("ul").css("display","block");
     }
   );
-  $(".main-menu ul li:last-child a").focusout(/*a중에서도 마지막꺼를 벗어날 때 out되도록 */
-    function(){
-      $(this).parent().parent().css("display","none");
-    }
-  );
+  
+    // 탭메뉴 제어를 위한 자바스크립트
+    $(".board h2").focus(function() {
+        $(this).parent().addClass("act")
+            .siblings().removeClass("act");
+    });
 });
