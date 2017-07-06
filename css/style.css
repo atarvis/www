@@ -661,3 +661,19 @@ pds-list time {
 .act .pds-more {
     display: block;
 }
+
+.news{
+  margin-top: 20px;
+}
+
+.news-heading{
+  font-family: "noto sans bold";
+  font-size: 1.6rem;
+}
+
+.news-more{
+position: absolute;
+top: -8px;
+right: -8px;
+padding: 8px;
+}
