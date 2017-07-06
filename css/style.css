@@ -156,7 +156,7 @@ a {
 }
 
 .info-menu li::after {
-    content: ":";
+    content: "|";
 }
 
 .info-menu li:last-child::after {
@@ -167,9 +167,7 @@ a {
 /* 메인 메뉴 */
 
 .main-menu {
-    background: linear-gradient(to bottom, #e5892d 0%, #e0652c 35%, #e0652c 65%, #e5892d 100%);
-    list-style-type: none;
-    border-top: 2px solid #181818;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
     border-radius: 0 0 5px 5px;
     padding-left: 225px;
     height: 45px;
@@ -350,12 +348,12 @@ a {
 .login {
     padding: 10px;
     border-radius: 5px;
-    background: radial-gradient(circle at right top, #e5892d, #e0652c);
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
     box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5);
 }
 
 .login-heading {
-    color: #ff0;
+    color: #fff;
     font-family: "Noto Sans Bold";
     font-size: 1.6rem;
     text-indent: 10px;
@@ -404,7 +402,7 @@ a {
     border: 0;
     padding: 0;
     cursor: pointer;
-    background: hsla(0, 100%, 70%, 1);
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
     color: #fff;
     border-radius: 3px;
     font-size: 1.3rem;
@@ -529,4 +527,46 @@ a {
 
 .footer {
     height: 10vh;
+}
+
+/* 검색 폼 */
+
+.search{
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    border-color: #aaa #aaa #fff;
+    border-radius: 15px 15px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    padding: 20px 25px 10px;
+}
+
+.search-form fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.search-form label::before {
+    content: "z";
+    font-family: "webcafeIcon";
+    position: relative;
+   top: 2px;
+}
+
+.search-form input {
+    width: 195px;
+    height: 24px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 1px 1px 1px 5px;
+    margin: 0 5px;
+}
+
+.btn-search {
+    border: 1px solid #aaa;
+    padding: 0 10px;
+     height: 24px;
+    border-radius: 3px;
+    color: #fff;
+    background: linear-gradient(to bottom, #666, #ccc);
 }
