@@ -662,25 +662,27 @@ pds-list time {
     display: block;
 }
 
- .news {
-     margin-top: 20px;
+/* 새소식 */
+
+.news {
+    margin-top: 20px;
     position: relative;
 }
 
-.news::before{
+.news::before {
     content: "";
     position: absolute;
     width: 80%;
-    top: 35px;
-    left: 0;
     height: 1px;
     background: linear-gradient(to right, #aaa, #fff);
-    }
+    top: 35px;
+    left: 0;
+}
 
 .news-heading {
-    font-family: "Noto Sans Bold";
-    font-size: 1.6rem;
     color: lightseagreen;
+    font-size: 1.6rem;
+    font-family: "Noto Sans Bold";
 }
 
 .news-item {
@@ -689,52 +691,162 @@ pds-list time {
     position: relative;
 }
 
-.news-item-heading{
-    font-family: "noto sans bold";
-
+.news-item a {
+    display: block;
 }
 
-.news-item-heading::before{
+.news-item-heading {
+    font-family: "Noto Sans Bold";
+}
+
+.news-item-heading::before {
     content: "r";
-    font-family: "wecafeIcon";
+    font-family: "webcafeIcon";
     position: relative;
     top: 2px;
 }
 
 .news-item-date,
-.news-item-brief{
-    margin: 5px 0 0 em;
-    display: block;
-    font-size: 90%;
-}
-
-.news-item a {
+.news-item-brief {
+    margin: 5px 0 0 1em;
     display: block;
 }
 
 .news-item-thumbnail {
     margin: 0;
     position: absolute;
-    top: 5;
-    left: 5;
+    top: 5px;
+    left: 5px;
     text-align: center;
 }
 
-.news-item-thumbnail img{
+.news-item-thumbnail img {
     margin-bottom: 15px;
-    box-shadow: 0 10 10px 5px rgba(0,0,0,0.5)
-    }
-    
-.news-more{
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.news-more {
     position: absolute;
     top: -8px;
     right: -8px;
     padding: 8px;
 }
 
-.news-more::before{
-   content: "p";
+.news-more::before {
+    content: "p";
     font-family: "webcafeIcon";
     color: lightseagreen;
     position: relative;
     top: 2px;
+}
+
+
+/* 신규이벤트 및 관련사이트 */
+
+.event-related {
+    background: linear-gradient(to bottom, #eee, #ccc);
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.event {
+    border-bottom: 1px solid #aaa;
+    position: relative;
+}
+
+.related {
+    margin-top: 10px;
+}
+
+.event-heading,
+.related-heading {
+    font-family: "Noto Sans Bold";
+    font-size: 1.6rem;
+}
+
+.event-heading span,
+.related-heading span {
+    color: lightseagreen;
+}
+
+#event-detail {
+    margin-top: 10px;
+}
+
+#event-detail p {
+    padding-bottom: 10px;
+}
+
+#event-detail img {
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+#event-detail em {
+    font-style: normal;
+}
+
+.btn-event {
+    height: 19px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+.btn-event-prev,
+.btn-event-next {
+    width: 18px;
+    height: 19px;
+    border: 0;
+    padding: 19px 0 0 0;
+    cursor: pointer;
+    overflow: hidden;
+    background: url("images/back_forward.png") no-repeat;
+}
+
+.btn-event-next {
+    background-position: 100% 0%;
+}
+
+.btn-event-prev:focus,
+.btn-event-next:focus {
+    outline: 1px dotted #00f;
+}
+
+.related-list {
+    list-style-type: none;
+    background: #fff;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 25px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.related-list:hover,
+.related-list:focus {
+    height: 125px;
+    padding: 5px 0;
+}
+
+.related-list a {
+    display: block;
+    line-height: 25px;
+    padding-left: 25px;
+}
+
+
+/* 슬로건 */
+
+.slogan {
+    height: 10vh;
+}
+
+.footer-bg {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.footer {
+    height: 10vh;
+}
